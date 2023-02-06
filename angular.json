@@ -105,6 +105,37 @@
           }
         }
       }
+    },
+    "ng-components-vd": {
+      "projectType": "library",
+      "root": "projects/ng-components-vd",
+      "sourceRoot": "projects/ng-components-vd/src",
+      "prefix": "vd",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-components-vd/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-components-vd/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-components-vd/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-components-vd/src/test.ts",
+            "tsConfig": "projects/ng-components-vd/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-components-vd/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "cracker-dashboard"

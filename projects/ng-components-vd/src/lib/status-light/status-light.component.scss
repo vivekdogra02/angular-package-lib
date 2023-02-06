@@ -1,0 +1,103 @@
+$red: #c0392b;
+$green: #27ae60;
+$yellow: #f1c40f;
+
+.status-pulse {
+  position: relative;
+  width: 10px;
+  height: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.pulse {
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  position: absolute;
+
+  &.red {
+    background-color: $red;
+  }
+  &.yellow {
+    background-color: $yellow;
+  }
+  &.green {
+    background-color: $green;
+  }
+}
+
+.dot {
+  background: transparent;
+  border-radius: 60px;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  opacity: 0;
+  border-width: 5px;
+  border-style: solid;
+
+  &.red {
+    border-color: $red;
+    animation: pulse 2s ease-out;
+    animation-iteration-count: infinite;
+  }
+  &.yellow {
+    border: 10px solid $yellow;
+  }
+  &.green {
+    border: 10px solid $green;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  10% {
+    transform: scale(0.1);
+    opacity: 0.1;
+  }
+  20% {
+    transform: scale(0.2);
+    opacity: 0.2;
+  }
+  30% {
+    transform: scale(0.3);
+    opacity: 0.3;
+  }
+
+  40% {
+    transform: scale(0.4);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  60% {
+    transform: scale(0.6);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(0.7);
+    opacity: 0.7;
+  }
+  80% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  90% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
