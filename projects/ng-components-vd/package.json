@@ -1,11 +1,24 @@
 {
-  "name": "ng-components-vd",
-  "version": "0.0.1",
-  "peerDependencies": {
-    "@angular/common": "^13.3.0",
-    "@angular/core": "^13.3.0"
-  },
-  "dependencies": {
-    "tslib": "^2.3.0"
-  }
+    "name": "ng-components-vd",
+    "version": "0.0.1",
+    "peerDependencies": {
+        "@angular/common": "^13.3.0",
+        "@angular/core": "^13.3.0"
+    },
+    "author": "Vivek Dogra",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vivekdogra02/angular-package-lib.git"
+    },
+    "homepage": "https://github.com/vivekdogra02/angular-package-lib",
+    "keywords": [
+        "angular",
+        "javascript",
+        "typescript",
+        "angular-library",
+        "angular-package"
+    ],
+    "dependencies": {
+        "tslib": "^2.3.0"
+    }
 }
